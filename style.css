@@ -1,0 +1,232 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#080808;
+color:white;
+min-height:100vh;
+padding:40px;
+}
+
+.bg-glow{
+position:fixed;
+top:-200px;
+right:-200px;
+width:500px;
+height:500px;
+background:#e10600;
+filter:blur(180px);
+opacity:.25;
+z-index:-1;
+}
+
+header{
+text-align:center;
+margin-bottom:40px;
+}
+
+header h1{
+font-size:3rem;
+color:#e10600;
+}
+
+header p{
+color:#999;
+}
+
+.card{
+max-width:600px;
+margin:auto;
+background:#141414;
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+background:#1d1d1d;
+border:none;
+border-radius:10px;
+color:white;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#e10600;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.requests{
+max-width:800px;
+margin:40px auto;
+}
+
+.song{
+background:#141414;
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.like-btn{
+background:#e10600;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0a0a, #000000);
+  color: white;
+}
+
+/* Roter Racing Glow */
+.bg-glow {
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: #e10600;
+  filter: blur(180px);
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* Karten Look (Audi / F1 UI) */
+.card, .song {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #222;
+  border-left: 4px solid #e10600;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.15);
+}
+
+/* Titel Styling */
+h1 {
+  color: #e10600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Buttons (F1 Look) */
+button {
+  background: linear-gradient(90deg, #e10600, #ff2a2a);
+  border: none;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+}
+
+/* Input Felder */
+input {
+  background: #111;
+  border: 1px solid #222;
+  color: white;
+  border-radius: 10px;
+}
+
+.now-playing {
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.9);
+  border-top: 2px solid #e10600;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0 0 20px rgba(225,6,0,0.3);
+}
+
+#nowPlayingText {
+  color: #e10600;
+}
+
+/* FIXED BOTTOM BAR */
+.now-playing {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: rgba(0,0,0,0.85);
+  border-top: 2px solid #e10600;
+
+  padding: 12px;
+  text-align: center;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+
+  box-shadow: 0 0 25px rgba(225,6,0,0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  animation: slideUp 0.6s ease;
+}
+
+/* LIVE PUNKT BLINKT */
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #e10600;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #e10600;
+  animation: blink 1s infinite;
+}
+
+/* TEXT ROTATION / SMOOTH CHANGE */
+#nowPlayingText {
+  color: #e10600;
+  transition: all 0.4s ease;
+}
+
+/* BLINK ANIMATION */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* SLIDE IN */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
