@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TrackTime | Streamplan</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/streamplan.css">
+
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="left">
+
+            <a href="index.html">
+                <img src="logo.png"
+                     alt="TrackTime Logo"
+                     class="logo">
+            </a>
+
+            <nav class="buttons">
+
+                <a href="index.html">Home</a>
+
+                <a href="musik.html">Musikwunsch</a>
+
+                <a href="#">Team</a>
+
+                <a href="#">News</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- CONTAINER -->
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <div class="header2">
+
+            <button class="arrow"
+                    onclick="changeWeek(-1)">
+                ⬅
+            </button>
+
+            <div class="title-box">
+
+                <h3>STREAMPLAN</h3>
+
+                <p id="weekText">
+                    Woche 0
+                </p>
+
+            </div>
+
+            <button class="arrow"
+                    onclick="changeWeek(1)">
+                ➡
+            </button>
+
+        </div>
+
+        <!-- COUNTDOWN -->
+
+        <div id="countdown"
+             class="countdown">
+
+            Lade Countdown...
+
+        </div>
+
+        <!-- WEEKDAYS -->
+
+        <div class="table">
+
+            <div class="row header">
+
+                <div>Montag</div>
+                <div>Dienstag</div>
+                <div>Mittwoch</div>
+                <div>Donnerstag</div>
+                <div>Freitag</div>
+                <div>Samstag</div>
+                <div>Sonntag</div>
+
+            </div>
+
+            <!-- CALENDAR -->
+
+            <div id="calendar"
+                 class="row">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN BUTTON -->
+
+    <button class="admin-btn"
+            onclick="openAdmin()">
+
+        ⚙
+
+    </button>
+
+    <!-- ADMIN MODAL -->
+
+    <div id="admin"
+         class="modal hidden">
+
+        <div class="modal-box">
+
+            <h4>Admin Login</h4>
+
+            <input
+                type="password"
+                id="pw"
+                placeholder="Passwort">
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <div id="adminPanel"
+                 class="hidden">
+
+                <h5>Neuen Stream hinzufügen</h5>
+
+                <input
+                    id="title"
+                    placeholder="Titel">
+
+                <input
+                    id="date"
+                    type="date">
+
+                <input
+                    id="time"
+                    type="time">
+
+                <button onclick="addStream()">
+                    Stream hinzufügen
+                </button>
+
+                <h5>
+                    Vorhandene Streams
+                </h5>
+
+                <div id="list"></div>
+
+            </div>
+
+            <button onclick="closeAdmin()">
+                Schließen
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
