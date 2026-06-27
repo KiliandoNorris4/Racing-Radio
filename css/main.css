@@ -1,0 +1,251 @@
+/* =========================
+   TRACKTIME MAIN STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --red:#e10600;
+    --red-hover:#ff2a2a;
+    --bg:#080808;
+    --card:#141414;
+    --text:#ffffff;
+    --text-soft:#cfcfcf;
+    --border:#222;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top,
+        #101010,
+        #050505 70%);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.bg-glow{
+    position:fixed;
+    top:-200px;
+    right:-200px;
+    width:500px;
+    height:500px;
+    background:var(--red);
+    filter:blur(180px);
+    opacity:.20;
+    z-index:-1;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+    position:fixed;
+    top:15px;
+    left:20px;
+    right:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    padding:12px 20px;
+
+    background:rgba(7, 7, 7, 0.45);
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
+    z-index:1000;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    height:28px;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+    color:white;
+    text-decoration:none;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid
+    rgba(255,255,255,.15);
+
+    transition:.25s;
+}
+
+.buttons a:hover{
+    background:rgba(225,6,0,.35);
+    border-color:var(--red);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card,
+.chart-box,
+.stream-card,
+.feature,
+.modal-box{
+
+    background:rgba(20,20,20,.92);
+
+    border:1px solid var(--border);
+
+    border-left:4px solid var(--red);
+
+    border-radius:16px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 25px rgba(225,6,0,.12);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input{
+    width:100%;
+
+    padding:14px;
+
+    background:#111;
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--red);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+    border:none;
+
+    background:
+    linear-gradient(
+    90deg,
+    var(--red),
+    var(--red-hover));
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    transition:.25s;
+}
+
+button:hover{
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 18px
+    rgba(225,6,0,.5);
+}
+
+/* =========================
+   TITLES
+========================= */
+
+h1{
+    color:white;
+    letter-spacing:4px;
+}
+
+h2{
+    color:white;
+}
+
+h3{
+    color:var(--red);
+}
+
+p{
+    color:var(--text-soft);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .topbar{
+        left:10px;
+        right:10px;
+        padding:10px;
+    }
+
+    .left{
+        gap:10px;
+    }
+
+    .buttons{
+        gap:6px;
+    }
+
+    .buttons a{
+        padding:6px 10px;
+        font-size:13px;
+    }
+
+    .logo{
+        height:24px;
+    }
+}
