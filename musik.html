@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TrackTime | Racing Radio</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/musik.css">
+
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="left">
+
+            <a href="index.html">
+                <img src="logo.png"
+                     alt="TrackTime Logo"
+                     class="logo">
+            </a>
+
+            <nav class="buttons">
+
+                <a href="index.html">Home</a>
+
+                <a href="streamplan.html">Streamplan</a>
+
+                <a href="team.html">Team</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- HEADER -->
+
+    <div class="music-header">
+
+        <h1>RACING RADIO</h1>
+
+        <h2>
+            Song Wünsche für den nächsten Stream
+        </h2>
+
+    </div>
+
+    <!-- SONG REQUEST -->
+
+    <form id="songForm" class="card">
+
+        <input
+            type="text"
+            id="viewer"
+            placeholder="Dein Nickname">
+
+        <input
+            type="text"
+            id="song"
+            placeholder="Songtitel">
+
+        <input
+            type="text"
+            id="artist"
+            placeholder="Künstler">
+
+            <button type="submit">
+                SONG SENDEN
+            </button>
+
+        </form>
+
+    <!-- CHARTS -->
+
+    <div class="charts-container">
+
+        <!-- TOP SONGS -->
+
+        <div class="chart-box">
+
+            <h2>TOP SONGS</h2>
+
+            <div id="topSongs">
+
+                <div class="empty-message">
+                    Noch keine Songs vorhanden
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ALLE REQUESTS -->
+
+        <div class="chart-box">
+
+            <h2>ALLE REQUESTS</h2>
+
+            <div id="songList">
+
+                <div class="empty-message">
+                    Lade Songs...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NOW PLAYING -->
+
+    <div class="now-playing">
+
+        <div class="live-dot"></div>
+
+        <span>
+            NOW PLAYING:
+        </span>
+
+        <span id="nowPlayingText">
+            Lade...
+        </span>
+
+    </div>
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- SCRIPT -->
+
+    <script src="js/musik.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/supabase.js"></script>
+
+</body>
+
+</html>
