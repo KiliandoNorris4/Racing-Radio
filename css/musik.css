@@ -1,0 +1,301 @@
+/* =========================
+   PAGE HEADER
+========================= */
+
+.music-header{
+    text-align:center;
+
+    padding-top:140px;
+    padding-bottom:30px;
+}
+
+.music-header h1{
+    font-size:3rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+}
+
+.music-header h2{
+    color:#cfcfcf;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+}
+
+/* =========================
+   NOW PLAYING
+========================= */
+
+.now-playing{
+
+    position:fixed;
+
+    bottom:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:
+    rgba(0,0,0,.85);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid
+    rgba(225,6,0,.35);
+
+    box-shadow:
+    0 0 25px rgba(225,6,0,.25);
+
+    font-weight:bold;
+}
+
+#nowPlayingText{
+    color:#e10600;
+}
+
+/* =========================
+   LIVE DOT
+========================= */
+
+.live-dot{
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#e10600;
+
+    box-shadow:
+    0 0 10px #e10600;
+
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.25;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+/* =========================
+   SONG FORM
+========================= */
+
+.card{
+    max-width:650px;
+
+    margin:30px auto;
+
+    padding:30px;
+}
+
+.card button{
+    width:100%;
+}
+
+/* =========================
+   CHARTS
+========================= */
+
+.charts-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    padding:20px;
+
+    margin-bottom:120px;
+}
+
+.chart-box{
+
+    width:100%;
+    max-width:500px;
+
+    padding:25px;
+}
+
+.chart-box h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+}
+
+/* =========================
+   SONG ITEMS
+========================= */
+
+.song{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border-radius:12px;
+
+    transition:.25s;
+}
+
+.song:hover{
+
+    background:
+    rgba(255,255,255,.08);
+}
+
+.song h3{
+
+    margin-bottom:4px;
+
+    color:white;
+
+    font-size:1rem;
+}
+
+.song p{
+
+    color:#cfcfcf;
+}
+
+.song small{
+
+    color:#999;
+}
+
+/* =========================
+   LIKE BUTTON
+========================= */
+
+.like-btn{
+
+    min-width:70px;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #e10600,
+    #ff2a2a);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    user-select:none;
+}
+
+.like-btn:hover{
+
+    transform:scale(1.08);
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message{
+
+    text-align:center;
+
+    color:#999;
+
+    padding:20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .music-header{
+        padding-top:130px;
+    }
+
+    .music-header h1{
+        font-size:2.2rem;
+    }
+
+    .music-header h2{
+        font-size:1rem;
+    }
+
+    .charts-container{
+        gap:20px;
+        padding:10px;
+    }
+
+    .chart-box{
+        padding:20px;
+    }
+
+    .song{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .like-btn{
+        width:100%;
+    }
+
+    .now-playing{
+
+        left:10px;
+        right:10px;
+
+        width:auto;
+
+        transform:none;
+
+        justify-content:center;
+
+        text-align:center;
+
+        font-size:13px;
+    }
+}
